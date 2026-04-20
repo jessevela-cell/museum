@@ -11,12 +11,12 @@
       webxr="optionalFeatures: hit-test;">
 
       <a-assets>
-        <a-asset-item id="m1" src="m1.glb"></a-asset-item>
-        <a-asset-item id="m2" src="m2.glb"></a-asset-item>
-        <a-asset-item id="m3" src="m3.glb"></a-asset-item>
-        <a-asset-item id="m4" src="m4.glb"></a-asset-item>
-        <a-asset-item id="m5" src="m5.glb"></a-asset-item>
-        <a-asset-item id="m6" src="m6.glb"></a-asset-item>
+        <a-asset-item id="m1" src="arca.glb"></a-asset-item>
+        <a-asset-item id="m2" src="varsova.glb"></a-asset-item>
+        <a-asset-item id="m3" src="nmah-1997_0097_0721-virgen_de_monserrate-100k-2048_std_draco.glb"></a-asset-item>
+        <a-asset-item id="m4" src="nmah-1997_0097_1082-cuatro-150k-4096_std_draco.glb"></a-asset-item>
+        <a-asset-item id="m5" src="nmah-1997_0097_1083-pandereta-100k-2048_std_draco.glb"></a-asset-item>
+        <a-asset-item id="m6" src="nmah-2014_0138_02-i01-baca_boot_combined-150k-4096_std.glb"></a-asset-item>
         <img id="concrete" src="concrete.jpg">
         <img id="vines" src="vines.png">
       </a-assets>
@@ -37,37 +37,45 @@
 
       <a-entity position="-4 0 -5">
         <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
-        <a-text value="01: THE ANCHOR" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-text value="Arca - An experimental artist that embodies the abject via visceral and seemingly grotesque imagery and soundscapes, unrelently embracing 
+          their queer identity" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
         <a-entity gltf-model="#m1" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
       </a-entity>
 
       <a-entity position="4 0 -5">
         <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
-        <a-text value="02: THE VOID" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-text value="Varsovia - An electronic experimental band that implements synths and gothic sounds while also expressing political distrust and criticisms" 
+          position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
         <a-entity gltf-model="#m2" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 11000"></a-entity>
       </a-entity>
 
       <a-entity position="-4 0 -10">
         <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
-        <a-text value="03: THE FRAGMENT" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-text value="Virgen de Monserrate - Similar to Our Lady of Guadalupe, this different appearance of Mary originates in folkore where Gerardo González was 
+          visited by this Marian icon where he called upon her, thereafter building a church.
+          Her darker skin represents a stage between compromise with Christianity and the different representation of Mary as having darker skin." 
+          position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
         <a-entity gltf-model="#m3" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 12000"></a-entity>
       </a-entity>
 
       <a-entity position="4 0 -10">
         <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
-        <a-text value="04: THE ECHO" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-text value="Cuatro - A historical artifact of a guitar, demonstrating the musical expression of Latine 'subjects.'
+        " position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
         <a-entity gltf-model="#m4" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 13000"></a-entity>
       </a-entity>
 
       <a-entity position="-4 0 -15">
         <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
-        <a-text value="05: THE VESSEL" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-text value="Pandereta - Another musical artifact, it derives from Puerto Rican immigrants who used instrumentation for cultural expression." 
+          position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
         <a-entity gltf-model="#m5" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 14000"></a-entity>
       </a-entity>
 
       <a-entity position="4 0 -15">
         <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
-        <a-text value="06: THE OBSERVER" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-text value="Baca Boot - Judy Baca's boots, who was a Mexican America artist and activist who established the first communal mural program and often fought
+          for equitable, diverse, and transformative spaces." position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
         <a-entity gltf-model="#m6" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-entity>
       </a-entity>
 
