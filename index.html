@@ -1,85 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Museum of Abjection and Latin American Artifact</title>
+    <title>Underpass Museum | Stable Build</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   </head>
   <body style="background-color: #000;">
     <a-scene 
-      renderer="antialias: true; colorManagement: true; toneMapping: ACESFilmic; exposure: 0.9;"
-      shadow="type: pcfsoft"
+      renderer="antialias: false; precision: medium; colorManagement: true; toneMapping: ACESFilmic; exposure: 0.9;"
       fog="type: exponential; color: #080808; density: 0.1;"
       webxr="optionalFeatures: hit-test;">
 
       <a-assets>
-        <a-asset-item id="m1" src="arca.glb"></a-asset-item>
-        <a-asset-item id="m2" src="dia.glb"></a-asset-item>
-        <a-asset-item id="m3" src="nmah-1997_0097_0721-virgen_de_monserrate-100k-2048_std_draco.glb"></a-asset-item>
-        <a-asset-item id="m4" src="nmah-1997_0097_1082-cuatro-150k-4096_std_draco.glb"></a-asset-item>
-        <a-asset-item id="m5" src="nmah-1997_0097_1083-pandereta-100k-2048_std_draco.glb"></a-asset-item>
-        <a-asset-item id="m6" src="nmah-2014_0138_02-i01-baca_boot_combined-150k-4096_std.glb"></a-asset-item>
-        <img id="concrete" src="thumbail.jpg">
-        <img id="vines" src="vines.jpg">
+        <a-asset-item id="m1" src="m1.glb"></a-asset-item>
+        <a-asset-item id="m2" src="m2.glb"></a-asset-item>
+        <a-asset-item id="m3" src="m3.glb"></a-asset-item>
+        <a-asset-item id="m4" src="m4.glb"></a-asset-item>
+        <a-asset-item id="m5" src="m5.glb"></a-asset-item>
+        <a-asset-item id="m6" src="m6.glb"></a-asset-item>
+        <img id="concrete" src="concrete.jpg">
+        <img id="vines" src="vines.png">
       </a-assets>
 
-      <a-light type="ambient" color="#222" intensity="0.3"></a-light>
-      <a-light type="point" color="#44aaff" intensity="2.5" position="0 6 -8" castShadow="true"
-               animation="property: intensity; from: 0.1; to: 3; dur: 5000; dir: alternate; loop: true; easing: easeInOutSine">
+      <a-light type="ambient" color="#333" intensity="0.5"></a-light>
+      <a-light type="point" color="#44aaff" intensity="2" position="0 6 -8"
+               animation="property: intensity; from: 0.2; to: 2.5; dur: 5000; dir: alternate; loop: true; easing: easeInOutSine">
       </a-light>
 
-      <a-plane position="0 0 -10" rotation="-90 0 0" width="50" height="60" material="src: #concrete; repeat: 12 15; roughness: 0.9" shadow="receive: true"></a-plane>
-      <a-box position="-8 5 -10" width="1" height="12" depth="40" material="src: #concrete; repeat: 1 5" shadow="receive: true"></a-box>
-      <a-box position="8 5 -10" width="1" height="12" depth="40" material="src: #concrete; repeat: 1 5" shadow="receive: true"></a-box>
-      <a-box position="0 11 -4" width="16" height="2" depth="4" material="src: #concrete; repeat: 4 1" shadow="cast: true"></a-box>
-      <a-box position="0 11 -12" width="16" height="2" depth="4" material="src: #concrete; repeat: 4 1" shadow="cast: true"></a-box>
+      <a-plane position="0 0 -10" rotation="-90 0 0" width="50" height="60" material="src: #concrete; repeat: 12 15; roughness: 0.9"></a-plane>
+      <a-box position="-8 5 -10" width="1" height="12" depth="40" material="src: #concrete; repeat: 1 5"></a-box>
+      <a-box position="8 5 -10" width="1" height="12" depth="40" material="src: #concrete; repeat: 1 5"></a-box>
+      <a-box position="0 11 -4" width="16" height="2" depth="4" material="src: #concrete; repeat: 4 1"></a-box>
+      <a-box position="0 11 -12" width="16" height="2" depth="4" material="src: #concrete; repeat: 4 1"></a-box>
 
       <a-plane position="-7.4 6 -4" rotation="0 90 0" width="12" height="8" material="src: #vines; transparent: true; alphaTest: 0.5; side: double"></a-plane>
       <a-plane position="7.4 6 -10" rotation="0 -90 0" width="12" height="8" material="src: #vines; transparent: true; alphaTest: 0.5; side: double"></a-plane>
 
       <a-entity position="-4 0 -5">
-        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete" shadow="cast: true"></a-box>
-        <a-text value="Arca - Experimental Electronic Musician from Venezuela. Known for abject and visceral imagery and soundscapes, e.g. Piel. " position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid" animation="property: opacity; from: 0.4; to: 1; dur: 2000; dir: alternate; loop: true"></a-text>
-        <a-entity gltf-model="#m1" position="0 1.3 0" scale="1 1 1" shadow="cast: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
+        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
+        <a-text value="01: THE ANCHOR" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-entity gltf-model="#m1" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
       </a-entity>
 
       <a-entity position="4 0 -5">
-        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete" shadow="cast: true"></a-box>
-        <a-text value="Varsovia - Post-punk Peruvian band known for industrial electronic beats and political messaging." position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid" animation="property: opacity; from: 0.4; to: 1; dur: 2000; dir: alternate; loop: true"></a-text>
-        <a-entity gltf-model="#m2" position="0 1.3 0" scale="1 1 1" shadow="cast: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 11000"></a-entity>
+        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
+        <a-text value="02: THE VOID" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-entity gltf-model="#m2" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 11000"></a-entity>
       </a-entity>
 
       <a-entity position="-4 0 -10">
-        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete" shadow="cast: true"></a-box>
-        <a-text value="Virgen de Monserrate - According to description from the Smithsonian: Based on lore and church documents, 
-          this figure illustrates the Miracle of Hormigueros. In 1599, Our Lady of Montserrat appeared to Gerardo González, 
-          a farmer near Hormigueros in southwestern Puerto Rico. Attacked by a bull, González invoked the name of the Virgin. 
-          Immediately, the beast fell, its legs broken and its forehead touching the ground as if in prayer. In gratitude, 
-          González built and dedicated a church to Our Lady of Montserrat. This figure dates from the beginning of the 19th 
-          century." position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid" animation="property: opacity; from: 0.4; to: 1; dur: 2000; dir: alternate; loop: true"></a-text>
-        <a-entity gltf-model="#m3" position="0 1.3 0" scale="1 1 1" shadow="cast: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 12000"></a-entity>
+        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
+        <a-text value="03: THE FRAGMENT" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-entity gltf-model="#m3" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 12000"></a-entity>
       </a-entity>
 
       <a-entity position="4 0 -10">
-        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete" shadow="cast: true"></a-box>
-        <a-text value="Cuatro - A historical instrument acting as a cultural artifact of a guitar." position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid" animation="property: opacity; from: 0.4; to: 1; dur: 2000; dir: alternate; loop: true"></a-text>
-        <a-entity gltf-model="#m4" position="0 1.3 0" scale="1 1 1" shadow="cast: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 13000"></a-entity>
+        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
+        <a-text value="04: THE ECHO" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-entity gltf-model="#m4" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 13000"></a-entity>
       </a-entity>
 
       <a-entity position="-4 0 -15">
-        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete" shadow="cast: true"></a-box>
-        <a-text value="Pandereta - This large, hand-held drum, known in Puerto Rico as a pandereta, is an essential instrument 
-          in the musical genre known as plena. The plena was developed by agricultural workers at the end of the 19th century 
-          on the southern coast of the island, around the city of Ponce. Considered a national musical genre throughout the 
-          20th century, the plena may have originally reflected musical traditions brought to Puerto Rico by immigrants from 
-          other Caribbean islands. This example is from the city of Mayagüez." position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid" animation="property: opacity; from: 0.4; to: 1; dur: 2000; dir: alternate; loop: true"></a-text>
-        <a-entity gltf-model="#m5" position="0 1.3 0" scale="1 1 1" shadow="cast: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 14000"></a-entity>
+        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
+        <a-text value="05: THE VESSEL" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-entity gltf-model="#m5" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 14000"></a-entity>
       </a-entity>
 
       <a-entity position="4 0 -15">
-        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete" shadow="cast: true"></a-box>
-        <a-text value= "Boots, worn by muralist Judy Baca - A Chicana visual and public artist who founded the first Los Angeles mural
-          program composed of locals." position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid" animation="property: opacity; from: 0.4; to: 1; dur: 2000; dir: alternate; loop: true"></a-text>
-        <a-entity gltf-model="#m6" position="0 1.3 0" scale="1 1 1" shadow="cast: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-entity>
+        <a-box position="0 0.5 0" width="1.2" height="1" depth="1.2" src="#concrete"></a-box>
+        <a-text value="06: THE OBSERVER" position="0 2.2 0.7" color="#44aaff" align="center" width="4" font="monoid"></a-text>
+        <a-entity gltf-model="#m6" position="0 1.3 0" scale="1 1 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-entity>
       </a-entity>
 
       <a-entity camera look-controls wasd-controls position="0 1.6 4">
